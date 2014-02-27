@@ -85,8 +85,8 @@ public class DoubleHealthScript : MonoBehaviour {
 		picheight = Mathf.Max(h1pic.height, h2pic.height);
 
 		//Set what Health 1 and Health 2 are labeled as
-		H1label = "Health 1";
-		H2label = "Hunger";
+		H1label = "Health";
+		H2label = "Gravity Exhaustion";
 
 		//Set whether you can exceed the maximum amount of health (by healing) (default = 50%)
 		softMax = false;
@@ -178,7 +178,6 @@ public class DoubleHealthScript : MonoBehaviour {
 		if(health2 < tippingPoint){
 			hitHealth1 (damageRate);
 		}
-		hitHealth2(.1f);
 	}
 	void OnGUI () {
 		string h1labelplus = H1label + ": ";
